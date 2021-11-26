@@ -8,11 +8,11 @@ CREATE TABLE tb_classe(
 );
 
 INSERT INTO tb_classe (nome, magia) VALUES
-("Arqueiro", FALSE),
-("Mago", TRUE),
-("Guerreiro", FALSE),
-("Anão", fALSE),
-("Goblin", tRUE);
+("Arqueiro", false),
+("Mago", true),
+("Guerreiro", false),
+("Anão", false),
+("Goblin", true);
 
 CREATE TABLE tb_personagens(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -36,5 +36,5 @@ INSERT INTO tb_personagens (nome, ataque, defesa, id_classe) VALUES
 SELECT * FROM tb_personagens WHERE ataque > 2000;
 SELECT * FROM tb_personagens WHERE defesa > 1000 AND defesa < 2000;
 SELECT * FROM tb_personagens WHERE nome LIKE "G%";
-SELECT * from tb_personagens INNER JOIN tb_classe ON tb_personagens.id_classe = tb_classe.id;
-SELECT * from tb_personagens INNER JOIN tb_classe ON tb_personagens.id_classe = tb_classe.id WHERE tb_classe.nome = "Guerreiro";
+SELECT * FROM tb_personagens INNER JOIN tb_classe ON tb_personagens.id_classe = tb_classe.id;
+SELECT * FROM tb_personagens INNER JOIN tb_classe ON tb_personagens.id_classe = tb_classe.id WHERE tb_classe.nome = "Guerreiro";
