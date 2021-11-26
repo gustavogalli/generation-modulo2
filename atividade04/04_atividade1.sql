@@ -20,7 +20,7 @@ CREATE TABLE tb_personagens(
     ataque INT,
     defesa INT,
     id_classe INT,
-    FOREIGN KEY (Id_classe) REFERENCES tb_classe (Id)
+    FOREIGN KEY (id_classe) REFERENCES tb_classe (id)
 );
 
 INSERT INTO tb_personagens (nome, ataque, defesa, id_classe) VALUES
